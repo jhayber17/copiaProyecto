@@ -1,11 +1,13 @@
 from graphene import ObjectType
 from graphene.relay import Node
+
 from graphene_django.filter import DjangoFilterConnectionField
 
 from .data.user.types import UserNode
 from .data.order.types import OrderNode
 from .data.client.types import ClientNode
 from .data.detail.types import DetailNode
+from .data.contact.types import ContactNode
 from .data.payment.types import PaymentNode
 from .data.courier.types import CourierNode
 from .data.product.types import ProductNode
@@ -22,6 +24,11 @@ from .data.client.mutations import (
     CreateClient,
     UpdateClient
 )
+from .data.contact.mutations import (
+    CreateContact,
+    UpdateContact
+)
+
 
 # Schema definition
 
