@@ -18,6 +18,10 @@ from .data.enterprise.mutations import (
     UpdateEnterprise,
     DeleteEnterprise
 )
+from .data.client.mutations import (
+    CreateClient,
+    UpdateClient
+)
 
 # Schema definition
 
@@ -56,3 +60,5 @@ class Mutation(ObjectType):
     create_enterprise = CreateEnterprise.Field()
     update_enterprise = UpdateEnterprise.Field()
     delete_enterprise = DeleteEnterprise.Field()
+
+    create_client = CreateClient.Field()
