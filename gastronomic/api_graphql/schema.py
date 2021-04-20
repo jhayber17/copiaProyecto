@@ -39,6 +39,7 @@ class Query(ObjectType):
     delivery = Node.Field(DeliveryNode)
     courier = Node.Field(CourierNode)
     client = Node.Field(ClientNode)
+    contact = Node.Field(ContactNode)
     enterprise = Node.Field(EnterpriseNode)
     order = Node.Field(OrderNode)
     product = Node.Field(ProductNode)
@@ -47,10 +48,11 @@ class Query(ObjectType):
     user = Node.Field(UserNode)
     management = Node.Field(ManagementNode)
     payment = Node.Field(PaymentNode) 
-
+    
     all_deliveries = DjangoFilterConnectionField(DeliveryNode)
     all_couriers = DjangoFilterConnectionField(CourierNode)
     all_clients = DjangoFilterConnectionField(ClientNode)
+    all_contacts = DjangoFilterConnectionField(ContactNode)
     all_enterprises = DjangoFilterConnectionField(EnterpriseNode)
     all_orders = DjangoFilterConnectionField(OrderNode)
     all_products = DjangoFilterConnectionField(ProductNode)
@@ -69,3 +71,4 @@ class Mutation(ObjectType):
     delete_enterprise = DeleteEnterprise.Field()
 
     create_client = CreateClient.Field()
+    create_contact = CreateContact.Field()

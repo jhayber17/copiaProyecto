@@ -9,10 +9,10 @@ class CreateContactInput(InputObjectType):
     lastnames = String(required=True)
     location = String(Required=True)
     telephone = String(Required=True)
-    license_plate = String(Required=True)
+    license_plate = String()
     created = DateTime(Required=True)
     updated = DateTime(Required=True)
-    user = ID(Required=True)
+    user_id = ID(Required=True)
 
 class UpdateContactInput(InputObjectType):
     names = String()
@@ -22,4 +22,4 @@ class UpdateContactInput(InputObjectType):
     license_plate = String()
     created = DateTime()
     updated = DateTime()
-    user = ID()
+    user_id = ID()
