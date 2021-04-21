@@ -72,3 +72,4 @@ class Mutation(ObjectType):
 
     create_client = CreateClient.Field()
     create_contact = CreateContact.Field()
+    update_contact = UpdateContact.Field()

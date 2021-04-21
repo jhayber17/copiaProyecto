@@ -15,6 +15,7 @@ class CreateContactInput(InputObjectType):
     user_id = ID(Required=True)
 
 class UpdateContactInput(InputObjectType):
+    id=ID(Required=True)
     names = String()
     lastnames = String()
     location = String()
